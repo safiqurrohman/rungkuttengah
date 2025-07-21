@@ -1,0 +1,170 @@
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Poppins", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+    --background-color: #ffffff;
+    --default-color: #292126;
+    --heading-color: #ff56a5;
+    --accent-color: #fd268a;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+    --nav-color: rgba(255, 255, 255, 0.6);
+    --nav-hover-color: #ffffff;
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #fd268a;
+    --nav-dropdown-hover-color: #ff56a5;
+    --btn-color : #4c85db;
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+    --background-color: #f7f9fc;
+    --surface-color: #ffffff;
+
+}
+
+.dark-background {
+    --background-color: #fd7295;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    /*color text header*/
+    --surface-color: #000000;
+    /*color text */
+    --contrast-color: #ffffff;
+}
+
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+}
+
+.navbar {
+    background-color: #292126;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+.colo-default {
+    color: var(--accent-color);
+}
+
+.btn-outline-pink {
+    color: var(--nav-dropdown-color);
+    border: none;
+    font-weight: 700;
+    color: #000000;
+
+
+}
+
+.btn-onclik{
+    background-color: var(--btn-color );
+    color: #000000;
+    border: 1px solid var(--btn-color );
+}
+
+.btn-outline-pink:hover,
+.btn-dark:hover{
+    background-color: #f87ab5;
+    color: #ffffff;
+    
+    
+}
+.btn-outline-pink:active,
+.btn-pink:active{
+    background-color: #f87ab5;
+    color: #000000;
+    
+    
+}
+.bg-fix{
+    background-color: #fc92ac;
+}
+
+.btn-dark{
+    text-decoration: none;
+    outline: none;
+    justify-content: center; 
+    max-width: 250px; height: 100%"
+}
+
+
+.btn-outline-dark{
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+.submenu{
+    border-radius: 5px;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+   
+}
+
+
+  /* Sidebar hanya muncul di layar besar (md ke atas) */
+  @media (min-width: 768px) {
+      .sidebar {
+          width: 250px;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: #000000;
+          /* Warna bg-secondary */
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          padding-top: 20px;
+      }
+
+      .sidebar a {
+          color: white;
+          padding: 10px 20px;
+          display: block;
+          text-decoration: none;
+      }
+
+      .sidebar a:hover {
+          background-color: #000000;
+      }
+
+      .content {
+          margin-left: 260px;
+          padding: 20px;
+          margin-top: 50px;
+
+      }
+
+      .navbar {
+          margin-left: 250px;
+          width: calc(100% - 250px);
+          position: fixed;
+
+      }
+
+  }
+
+  /* Sidebar di layar kecil tidak muncul */
+  @media (max-width: 767px) {
+      .sidebar {
+          display: none;
+      }
+
+      .content {
+          margin-left: 0;
+        margin-top: 50px;
+      }
+  }
