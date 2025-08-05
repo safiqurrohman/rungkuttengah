@@ -10,19 +10,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#profile"><span>Profile</span></a></li>
-          <!-- <li><a href="#visi">Visi & Misi</a></li> -->
-          <li><a href="#struktur">Struktural</a></li>
-          <li><a href="#berita">Berita</a></li>
-          <li><a href="{{ route('umkm') }}"><span>Umkm</span></i></a>
+          <li><a href="{{route('umkm')}}" class="active">Home</a></li>
+          <li><a href="#kreatif">Produk</a></li>
+          
           </li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
     </div>
   </header>
-
 

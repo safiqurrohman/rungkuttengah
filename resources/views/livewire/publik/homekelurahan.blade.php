@@ -2,39 +2,41 @@
 @livewire('pages.header')
     <main class="main">
         <!-- Hero Section -->
+             <!-- Hero Section -->
         <section id="hero" class="hero section">
-            <div class="hero-wrapper"
-                style="position: relative; overflow: hidden; padding: 0px; width: 100%;
-                        background-image: url('{{ asset('assets/img/kelurahan/herokelurahan.jpeg') }}');
-                        background-repeat: no-repeat; background-size: cover; background-position: center; z-index: 1;">
-                
-                <div class="container mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
-                            <h1 style="color: white">Kelurahan Rungkut <span class="color-span">Tengah</span></h1>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus id tortor facilisis tincidunt. Donec gravida risus at sollicitudin luctus.</p>
-                            <div class="stats-row mt-4">
-                                <div class="stat-item">
-                                <span class="stat-number text-white">35</span>
-                                <span class="stat-label text-white fw-bold">UMKM</span>
-                                </div>
-                                <div class="stat-item">
-                                <span class="stat-number text-white">9</span>
-                                <span class="stat-label  text-white fw-bold">RW</span>
-                                </div>
-                            </div>
-                            <div class="action-buttons">
-                            <a href="#" class="btn-primary">Jelajahi umkm</a>
-                            <a href="#" class="btn-secondary">video</a>
+            <div class="hero-wrapper">
+                <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+                    <h1>Kelurahan Rungkut Tengah</h1>
+                    <p>Situs resmi Kelurahan Rungkut Tengah yang menyuguhkan informasi seputar wilayah, aktivitas warga, serta beragam potensi lokal secara digital dan mudah dijangkau.</p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                        <span class="stat-number">30</span>
+                        <span class="stat-label">UMKM</span>
                         </div>
-                        </div>
-                        <div class="col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
-                        <!-- <img src="{{ asset('assets/img/kelurahan/herokelurahan.jpeg')}}" alt="Education" class="img-fluid main-image"> -->
+                        <div class="stat-item">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">RW</span>
                         </div>
                     </div>
+                    <div class="action-buttons">
+                        <a href="{{route('umkm')}}" class="btn-primary">Jelajahi UMKM</a>
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="{{ asset('assets/img/kelurahan/homekelurahan.jpeg') }}" alt="Kelurahan" style="width: 700px" class="img-fluid main-image">
+                        <div class="image-overlay">
+                            <div class="badge-accredited">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <span>Kelurahan unggul</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 </div>
             </div>
-
             <div class="feature-cards-wrapper" data-aos="fade-up" data-aos-delay="300">
                 <div class="container">
                 <div class="row gy-4">
@@ -84,82 +86,71 @@
                     <span class="month">NOV</span>
                     </div>
                     <div class="event-info">
-                    <h3>Selamat Datang Di Kelurangan Umkm Kreatif</h3>
+                    <h3>Selamat Datang Di Kelurahan Rungkut Tengah</h3>
                     <p>Jelajahi produk warga rungkut tengah yang memiliki keunikan dan kenikmatan yang berbeda.</p>
                     </div>
                 </div>
                 </div>
             </div>
-        </section><!-- /Hero Section -->
+        </section>
+       
 
         <!-- About Section -->
-        <section id="profile" class="profile section">
+        <section id="about" class="about section">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Profile Kelurahan</h3>
-                    <h2>Sejarah Kelurahan Rungkut Tengah</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae odio ac nisi tristique venenatis. Nullam feugiat ipsum vitae justo finibus, in sagittis dolor malesuada. Aenean vel fringilla est, a vulputate massa.</p>
+                    <div class="col-lg-6">
+                        <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Profil</h3>
+                            <h2>Kelurahan Rungkut Tengah</h2>
+                            <p> Sejarah Rungkut Tengah</p>
 
-                    <div class="timeline">
-                        <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>1965</h4>
-                            <p>Etiam at tincidunt arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                        </div>
-                        </div>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <p>Rungkut Tengah (bahasa Jawa: ꦫꦸꦁꦏꦸꦢ꧀ꦠꦼꦔꦃ, translit. Rungkud Tengah) adalah salah satu kelurahan di Kecamatan Gunung Anyar, Kota Surabaya, Provinsi Jawa Timur. Rungkut dikenal sebagai kawasan emas di Surabaya Timur, terkenal dengan kawasan industri terbesar di Jawa Timur serta menjadi jalur utama warga Sidoarjo menuju Surabaya.
+Wilayah ini memiliki banyak area yang menggunakan nama "Rungkut", seperti Rungkut Menanggal, Rungkut Lor, Rungkut Kidul, Rungkut Asri, Rungkut Barata, dan Rungkut Mapan. Meskipun bernama "Tengah", posisi Rungkut Tengah tidak berada tepat di antara Rungkut Lor dan Rungkut Kidul. Secara administratif, wilayah ini juga berbatasan dengan Kelurahan Rungkut Menanggal dan Rungkut Kidul.
+Secara etimologis, nama Rungkut kemungkinan berasal dari kata “rumput” karena dulunya wilayah ini dipenuhi semak belukar dan rawa-rawa. Dalam bahasa Jawa, “rungkut” berarti lebat dan tidak terpelihara, menggambarkan kondisi alam wilayah ini pada masa lalu sebelum berkembang menjadi kawasan pemukiman dan industri seperti sekarang.</p>
+                                        </div>
+                                    </div>
 
-                        <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>1982</h4>
-                            <p>Donec dignissim, odio ac imperdiet luctus, ante nisl accumsan justo, nec tempus augue mi in nulla.</p>
-                        </div>
-                        </div>
+                                    <div class="timeline-item">
+                                        
+                                        <div class="timeline-content">
+                                        
+                                        </div>
+                                    </div>
 
-                        <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>1998</h4>
-                            <p>Suspendisse potenti. Nullam lacinia dictum auctor. Phasellus euismod sem at dui imperdiet, ac tincidunt mi placerat.</p>
-                        </div>
-                        </div>
-
-                        <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>2010</h4>
-                            <p>Vestibulum ultrices magna ut faucibus sollicitudin. Sed eget venenatis enim, nec imperdiet ex.</p>
-                        </div>
-                        </div>
+                                <div class="timeline-item">
+                                    
+                                        <div class="timeline-content">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-6">
-                    <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="{{ asset('assets/img/kelurahan/herokelurahan.jpeg')}}" alt="Halaman Kelurahan" class="img-fluid rounded">
+                    <div class="col-lg-6">
+                        <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="{{asset('assets/img/kelurahan/defaultfoto.jpeg')}}" alt="Campus" class="img-fluid rounded">
 
-                    <div class="mission-vision" data-aos="fade-up" data-aos-delay="400">
-                        <div class="mission">
-                        <h3>Visi</h3>
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                        <div class="mission-vision" data-aos="fade-up" data-aos-delay="400">
+                            <div class="mission">
+                            <h3>Visi</h3>
+                            <p>Terwujudnya Keluarga Sehat, Cerdas, Berdaya, Beriman dan Bertaqwa Menuju Indonesia Maju</p>
+                            </div>
+
+                            <div class="vision">
+                            <h3>Misi</h3>
+                            <p>Membentuk keluarga yang berkarakter, cerdas, dan mandiri melalui penguatan pendidikan, ekonomi, kesehatan, ketahanan keluarga, serta pemanfaatan teknologi informasi.</p>
+                            </div>
                         </div>
-
-                        <div class="vision">
-                        <h3>Misi</h3>
-                        <p>Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.</p>
                         </div>
-                    </div>
                     </div>
                 </div>
-                </div>
-
-
-
             </div>
         </section><!-- /About Section -->
 
@@ -176,41 +167,33 @@
                             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                                 <div class="col">
                                 <div class="value-card">
-                                    <div class="value-icon">
-                                    <i class="bi bi-book"></i>
-                                    </div>
-                                    <h4>Academic Excellence</h4>
-                                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                                    <img src="{{asset('assets/img/kelurahan/orang.png')}}" alt="">
+                                    <h4>Nama Pegawai</h4>
+                                    <p>Jabatan di kelurahan</p>
                                 </div>
                                 </div>
 
                                 <div class="col">
                                 <div class="value-card">
-                                    <div class="value-icon">
-                                    <i class="bi bi-people"></i>
-                                    </div>
-                                    <h4>Community Engagement</h4>
-                                    <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+                                    <img src="{{asset('assets/img/kelurahan/orang.png')}}" alt="">
+                                    <h4>Nama Pegawai</h4>
+                                    <p>Jabatan di kelurahan</p>
                                 </div>
                                 </div>
 
                                 <div class="col">
                                 <div class="value-card">
-                                    <div class="value-icon">
-                                    <i class="bi bi-lightbulb"></i>
-                                    </div>
-                                    <h4>Innovation</h4>
-                                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+                                    <img src="{{asset('assets/img/kelurahan/orang.png')}}" alt="">
+                                    <h4>Nama Pegawai</h4>
+                                    <p>Jabatan di kelurahan</p>
                                 </div>
                                 </div>
 
                                 <div class="col">
                                 <div class="value-card">
-                                    <div class="value-icon">
-                                    <i class="bi bi-globe"></i>
-                                    </div>
-                                    <h4>Global Perspective</h4>
-                                    <p>Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus.</p>
+                                    <img src="{{asset('assets/img/kelurahan/orang.png')}}" alt="">
+                                    <h4>Nama Pegawai</h4>
+                                    <p>Jabatan di kelurahan</p>
                                 </div>
                                 </div>
                             </div>
@@ -222,12 +205,13 @@
         <!-- end struktural kelurahan  -->
 
         <!-- Students Life Block Section -->
-        <section id="history" class="students-life-block section">
+        <section id="berita" class="students-life-block section">
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Keseruan Kegiatan</h2>
+                <h2>Berita dan Kegiatan</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
+            </div>
+            <!-- End Section Title -->
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row align-items-center g-5 mb-5">
@@ -240,35 +224,13 @@
 
                 <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
                     <div class="content-wrapper">
-                    <div class="section-badge" data-aos="fade-up" data-aos-delay="350">
-                        <span>Student Life</span>
-                    </div>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse at libero corrupti nulla minima quae.</h2>
-                    <p class="lead-text" data-aos="fade-up" data-aos-delay="450">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
-
-                    <div class="info-grid" data-aos="fade-up" data-aos-delay="500">
-                        <div class="info-item">
-                        <div class="info-icon">
-                            <i class="bi bi-calendar-event"></i>
+                        <div class="section-badge" data-aos="fade-up" data-aos-delay="350">
+                            <span>Berita</span>
                         </div>
-                        <div class="info-text">
-                            <strong>Year-Round Events</strong>
-                            <span>Duis aute irure dolor in reprehenderit voluptate</span>
-                        </div>
-                        </div>
-
-                        <div class="info-item">
-                        <div class="info-icon">
-                            <i class="bi bi-award"></i>
-                        </div>
-                        <div class="info-text">
-                            <strong>Achievement Programs</strong>
-                            <span>Excepteur sint occaecat cupidatat non proident</span>
-                        </div>
+                        <h2 data-aos="fade-up" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse at libero corrupti nulla minima quae.</h2>
+                        <p class="lead-text" data-aos="fade-up" data-aos-delay="450">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
 
                 <div class="activities-showcase">
@@ -276,11 +238,11 @@
                     <div class="col-lg-8" data-aos="fade-right" data-aos-delay="200">
                     <div class="featured-activity">
                         <div class="activity-media">
-                        <img src="{{ asset('assets/img/education/activities-2.webp')}}" alt="Featured Activity" class="img-fluid">
+                        <img src="{{ asset('assets/img/kelurahan/defaultfoto.jpeg')}}" alt="Berita" class="img-fluid">
                         <div class="activity-overlay">
                             <div class="overlay-content">
-                            <h4>Student Organizations</h4>
-                            <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                            <h4>Sampah Jadi Cuan</h4>
+                            <p>KKN kelompon 130 melakukan sosialisasi sampah jadi bahan yang  berguna dan bisa di manfaatkan untuk tanaman.</p>
                             <a href="#" class="overlay-btn">
                                 <i class="bi bi-arrow-right"></i>
                             </a>
@@ -292,175 +254,138 @@
 
                     <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
                     <div class="activities-list">
-                        <div class="activity-item" data-aos="slide-up" data-aos-delay="350">
-                        <div class="activity-thumb">
-                            <img src="{{ asset('assets/img/education/activities-6.webp')}}" alt="Research Projects" class="img-fluid">
-                        </div>
-                        <div class="activity-info">
-                            <h6>Research Projects</h6>
-                            <p>Sed ut perspiciatis unde omnis natus error</p>
-                        </div>
+
+                        <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" style="boreder: none; text-decoration: none; text-align: left;">
+                                <div class="activity-item" data-aos="slide-up" data-aos-delay="350">
+                                    <div class="activity-thumb">
+                                        <img src="{{ asset('assets/img/education/activities-6.webp')}}" alt="Research Projects" class="img-fluid">
+                                    </div>
+                                    <div class="activity-info">
+                                        <h6>KKN Kelompok 130</h6>
+                                        <p>Kelompok KKN 130  Melakukan sosialisasi dalam rebrending umkm yang ada di kelurahan rungkut tengah</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
 
-                        <div class="activity-item" data-aos="slide-up" data-aos-delay="400">
-                        <div class="activity-thumb">
-                            <img src="{{ asset('assets/img/education/activities-1.webp')}}" alt="Community Service" class="img-fluid">
-                        </div>
-                        <div class="activity-info">
-                            <h6>Community Service</h6>
-                            <p>At vero eos et accusamus et iusto odio</p>
-                        </div>
+                        <div class="col-12 text-center mt-3" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" style="boreder: none; text-decoration: none; text-align: left;">
+                                <div class="activity-item" data-aos="slide-up" data-aos-delay="350">
+                                    <div class="activity-thumb">
+                                        <img src="{{ asset('assets/img/education/activities-6.webp')}}" alt="Research Projects" class="img-fluid">
+                                    </div>
+                                    <div class="activity-info">
+                                        <h6>KKN Kelompok 130</h6>
+                                        <p>Kelompok KKN 130  Melakukan sosialisasi dalam rebrending umkm yang ada di kelurahan rungkut tengah</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
 
-                        <div class="activity-item" data-aos="slide-up" data-aos-delay="450">
-                        <div class="activity-thumb">
-                            <img src="{{ asset('assets/img/education/activities-4.webp')}}" alt="Innovation Labs" class="img-fluid">
+                        <div class="col-12 text-center mt-3" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" style="boreder: none; text-decoration: none; text-align: left;">
+                                <div class="activity-item" data-aos="slide-up" data-aos-delay="350">
+                                    <div class="activity-thumb">
+                                        <img src="{{ asset('assets/img/education/activities-6.webp')}}" alt="Research Projects" class="img-fluid">
+                                    </div>
+                                    <div class="activity-info">
+                                        <h6>KKN Kelompok 130</h6>
+                                        <p>Kelompok KKN 130  Melakukan sosialisasi dalam rebrending umkm yang ada di kelurahan rungkut tengah</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="activity-info">
-                            <h6>Innovation Labs</h6>
-                            <p>Temporibus autem quibusdam officiis debitis</p>
-                        </div>
-                        </div>
+
                     </div>
                     </div>
                 </div>
                 </div>
 
+            </div>
+            <div class="col-12 text-center mt-3" data-aos="fade-up" data-aos-delay="600">
+                <a href="#" class="btn btn-primary">View More News</a>
             </div>
         </section>
         <!-- /histori Life Block Section -->
 
         <!-- Recent News Section -->
-        <section id="kreatif" class="recent-news section">
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Produk Umkm</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatibus.</p>
-            </div>
-            <!-- End Section Title -->
-
+        <section id="Produk" class="alumni section">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row mb-5">
+                    <div class="container section-title" data-aos="fade-up">
+                        <h2>Produk</h2>
+                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    </div>
+                    <!-- End Section Title -->
 
-                <div class="row gy-4">
-
-                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                    <article class="post-item d-flex">
-                        <div class="post-img">
-                            <img src="{{ asset('assets/img/blog/blog-post-1.webp')}}" alt="" class="img-fluid" loading="lazy">
+                    <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="alumni-card">
+                        <div class="alumni-image">
+                            <img src="{{ asset('assets/img/kelurahan/produk.png')}}" alt="produk" class="img-fluid">
                         </div>
-
-                        <div class="post-content flex-grow-1">
-                            <a href="#" class="category">Nama Produk</a>
-
-                            <h2 class="post-title">
-                            <a href="#">Sed ut perspiciatis unde omnis</a>
-                            </h2>
-
-                            <p class="post-description">
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
-                            </p>
-
-                            <div class="post-meta">
-                            <div class="post-author">
-                                <img src="{{ asset('assets/img/person/person-f-12.webp')}}" alt="" class="img-fluid">
-                                <span class="author-name">Lina Chen</span>
-                            </div>
-                            <span class="post-date">Mar 15, 2025</span>
-                            </div>
+                        <div class="alumni-content">
+                            <h4>Makan Khas Bu Ala</h4>
+                            <p class="alumni-class">Sejak 2020</p>
+                            <p class="alumni-position">Kelurahan Rungkut tengah, rw 6</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tempus justo ac magna auctor, vel volutpat nisl mollis.</p>
+                            <a href="#" class="read-more">Detail Produk<i class="bi bi-arrow-right"></i></a>
                         </div>
-                    </article>
-                </div><!-- End post item -->
-                
-                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                    <article class="post-item d-flex">
-                        <div class="post-img">
-                            <img src="{{ asset('assets/img/blog/blog-post-1.webp')}}" alt="" class="img-fluid" loading="lazy">
                         </div>
+                    </div>
 
-                        <div class="post-content flex-grow-1">
-                            <a href="#" class="category">Nama Produk</a>
-
-                            <h2 class="post-title">
-                            <a href="#">Sed ut perspiciatis unde omnis</a>
-                            </h2>
-
-                            <p class="post-description">
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
-                            </p>
-
-                            <div class="post-meta">
-                            <div class="post-author">
-                                <img src="{{ asset('assets/img/person/person-f-12.webp')}}" alt="" class="img-fluid">
-                                <span class="author-name">Lina Chen</span>
-                            </div>
-                            <span class="post-date">Mar 15, 2025</span>
-                            </div>
+                    <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="alumni-card">
+                        <div class="alumni-image">
+                            <img src="{{ asset('assets/img/kelurahan/produk.png')}}" alt="produk" class="img-fluid">
                         </div>
-                    </article>
-                </div><!-- End post item -->
-                
-                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                    <article class="post-item d-flex">
-                        <div class="post-img">
-                            <img src="{{ asset('assets/img/blog/blog-post-1.webp')}}" alt="" class="img-fluid" loading="lazy">
+                        <div class="alumni-content">
+                            <h4>Makan Khas Bu Ala</h4>
+                            <p class="alumni-class">Sejak 2020</p>
+                            <p class="alumni-position">Kelurahan Rungkut tengah, rw 6</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tempus justo ac magna auctor, vel volutpat nisl mollis.</p>
+                            <a href="#" class="read-more">Detail Produk<i class="bi bi-arrow-right"></i></a>
                         </div>
-
-                        <div class="post-content flex-grow-1">
-                            <a href="#" class="category">Nama Produk</a>
-
-                            <h2 class="post-title">
-                            <a href="#">Sed ut perspiciatis unde omnis</a>
-                            </h2>
-
-                            <p class="post-description">
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
-                            </p>
-
-                            <div class="post-meta">
-                            <div class="post-author">
-                                <img src="{{ asset('assets/img/person/person-f-12.webp')}}" alt="" class="img-fluid">
-                                <span class="author-name">Lina Chen</span>
-                            </div>
-                            <span class="post-date">Mar 15, 2025</span>
-                            </div>
                         </div>
-                    </article>
-                </div><!-- End post item -->
-                
-                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                    <article class="post-item d-flex">
-                        <div class="post-img">
-                            <img src="{{ asset('assets/img/blog/blog-post-1.webp')}}" alt="" class="img-fluid" loading="lazy">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="alumni-card">
+                        <div class="alumni-image">
+                            <img src="{{ asset('assets/img/kelurahan/produk.png')}}" alt="produk" class="img-fluid">
                         </div>
-
-                        <div class="post-content flex-grow-1">
-                            <a href="#" class="category">Nama Produk</a>
-
-                            <h2 class="post-title">
-                            <a href="#">Sed ut perspiciatis unde omnis</a>
-                            </h2>
-
-                            <p class="post-description">
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
-                            </p>
-
-                            <div class="post-meta">
-                            <div class="post-author">
-                                <img src="{{ asset('assets/img/person/person-f-12.webp')}}" alt="" class="img-fluid">
-                                <span class="author-name">Lina Chen</span>
-                            </div>
-                            <span class="post-date">Mar 15, 2025</span>
-                            </div>
+                        <div class="alumni-content">
+                            <h4>Makan Khas Bu Ala</h4>
+                            <p class="alumni-class">Sejak 2020</p>
+                            <p class="alumni-position">Kelurahan Rungkut tengah, rw 6</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tempus justo ac magna auctor, vel volutpat nisl mollis.</p>
+                            <a href="#" class="read-more">Detail Produk<i class="bi bi-arrow-right"></i></a>
                         </div>
-                    </article>
-                </div><!-- End post item -->
+                        </div>
+                    </div>
 
-                
+                    <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="alumni-card">
+                        <div class="alumni-image">
+                            <img src="{{ asset('assets/img/kelurahan/produk.png')}}" alt="produk" class="img-fluid">
+                        </div>
+                        <div class="alumni-content">
+                            <h4>Makan Khas Bu Ala</h4>
+                            <p class="alumni-class">Sejak 2020</p>
+                            <p class="alumni-position">Kelurahan Rungkut tengah, rw 6</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed tempus justo ac magna auctor, vel volutpat nisl mollis.</p>
+                            <a href="#" class="read-more">Detail Produk<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        </div>
+                    </div>
 
+                    <div class="col-12 text-center mt-3" data-aos="fade-up" data-aos-delay="600">
+                        <a href="{{ route('umkm')}}" class="btn btn-primary">View More Produk</a>
+                    </div>
                 </div>
 
             </div>
-        </section><!-- /Recent News Section -->
+        </section><!-- /Alumni Section -->
         
         <section id="contact" class="contact section">
             <!-- Section Title -->

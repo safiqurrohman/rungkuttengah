@@ -8,18 +8,35 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Rungkut-tengah') }}</title>
 
-    <!-- Fonts -->
+        <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="{{ asset('assets/img/kelurahan/logosurabaya.png')}}" rel="icon">
+    <link href="{{ asset('assets/img/kelurahan/logosurabaya.png')}}" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="{{ asset('assets/css/main.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,56 +48,7 @@
 
 <body style="background-color:rgb(255, 255, 255)">
     <div id="app">
-
-        <div class="sidebar d-none d-md-block">
-            <div class="d-block text-center text-white mb-3 mt-3" style="font-size: 24px;">
-                <img src="{{ asset('assets/img/unnamed.png') }}" alt="logo temprina" class="img-fluid" style="width: 140px">
-                <p style="font-size: 15px; color:rgb(185, 185, 185)">Human Machine Interface </p>
-                <div class="mt-2">
-                    <i class="bi bi-person" style="font-size: 3rem; height: 20px"></i>
-                    <p style="font-size: 17px; margin-top: -12px">{{Auth::user()->role}}</p>
-                </div>
-                <div style="border-bottom: 1px solid #FFFFFF; width: 90%; margin: 0 auto; margin-bottom: 10px"></div>
-            </div>
-            <div class="menu px-2">
-                @if(Auth::user()->role == 'admin')
-                <a href="{{ route('dashboard')}}" class="submenu my-1 {{ request()->routeIs('dashboard') ? 'btn-onclik' : 'btn-outline-light'}}">
-                    Dashboard
-                </a>
-                <a href="{{ route('pekerjaan')}}" class="submenu my-1 {{ request()->routeIs('pekerjaan') ? 'btn-onclik' : 'btn-outline-light'}}">
-                    Pekerjaan
-                </a>
-               
-                <a href="{{ route('karyawan')}}" class="submenu my-1 {{ request()->routeIs('karyawan') ? 'btn-onclik' : 'btn-outline-light'}}">
-                    Karyawan
-                </a>
-                <a href="{{ route('laporan')}}" class="submenu my-1 {{ request()->routeIs('laporan') ? 'btn-onclik' : 'btn-outline-light'}}">
-                    Laporan
-                </a>
-                @endif
-
-                @if(Auth::user()->role == 'operator')
-                <a class="d-flex" style="justify-content: center">
-                    {{Auth::user()->name}}
-                </a>
-                <a class="d-flex" style="justify-content: center">
-                    {{Auth::user()->email}}
-                </a>
-                @endif
-
-                <div class="d-flex" style="width: 100%; height: 100px; justify-content: center; align-items: flex-end; margin-left: -10px">
-                    <a class="submenu" href="{{ route('logout') }}" style="background-color: white; color: #000000; font-weight: bold"
-                        onclick="event.preventDefault(); document.getElementById('logout').submit();">
-                        <i class="bi bi-box-arrow-left" style="font-size: 1rem;"></i> Logout
-                    </a> 
-
-                </div>
-                <form id="logout" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </div>
-
+        {{-- Navbar --}}
         <nav class="navbar navbar-light bg-light shadow-sm fixed-top d-block d-md-none">
             <div class="container-fluid d-flex align-items-center">
                 <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
@@ -89,86 +57,55 @@
             </div>
         </nav>
 
-        <!-- navbar top ----------------- -->
-        <!-- <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm d-flex align-items-center fixed-top">
-            <div class="container-fluid">
-                <button class="btn btn-secondary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-                    ☰
-                </button>
-
-                <ul class="navbar-nav ms-auto" >
-                    @guest
-                    @if (Route::has('login'))
-                    <li class="nav-item">
-                        <a class="link nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    @endif
-                    @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
-                    </li>
-                    @endif
-                    @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }} - {{Auth::user()->role}}
+        {{-- Sidebar hanya untuk admin yang login --}}
+        @auth
+            @if(Auth::user()->role === 'admin')
+                <div class="sidebar d-none d-md-block">
+                    <b class="d-block text-center text-white mb-3" style="font-size: 24px;">
+                        Admin Kelurahan
+                    </b>
+                    <div style="border-bottom: 1px solid #FFFFFF; width: 90%; margin: 0 auto; margin-bottom: 10px"></div>
+                    <div class="menu px-2">
+                        <a href="{{ route('dashboard') }}" class="submenu my-1 {{ request()->routeIs('dashboard') ? 'btn-pink' : 'btn-outline-light'}}">
+                            <i class="bi bi-house-door" style="font-size: 1.4rem"></i>
+                            Dashboard
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-                            </li>
-                        </ul>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                    @endguest
-                </ul>
-            </div>
-        </nav> -->
+                        <a href="{{ route('logout') }}" class="submenu my-1"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="bi bi-box-arrow-right" style="font-size: 1.3rem;"></i> Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
+                    </div>
+                </div>
+            @endif
+        @endauth
 
-        <!-- Sidebar untuk HP (Menggunakan offcanvas) -->
-        <div class="offcanvas offcanvas-sart d-md-none" id="mobileSidebar">
-            <div class="offcanvas-header bg-secondary text-white">
-                <h5 class="offcanvas-title">Menu</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-            </div>
-
-            <div class="offcanvas-body bg-secondary">
-                <a href="{{ route('pekerjaan')}}" class="btn d-block text-white my-1 {{ request()->routeIs('pekerjaan') ? 'btn-primary' : 'btn-outline-light'}}">
-                    Beranda
-                </a>
-                {{-- @if(Auth::User()->role == 'admin')
-                <a href="{{ route('user')}}" class="btn d-block text-white my-1 {{ request()->routeIs('user') ? 'btn-primary' : 'btn-outline-light'}}">User</a>
-                @endif
-                <a href="{{ route('custemer')}}" class="btn d-block text-white my-1 {{ request()->routeIs('custemer') ? 'btn-primary' : 'btn-outline-light'}}">Customer</a>
-                @if(Auth::User()->role == 'admin')
-                <a href="{{ route('treatment')}}" class="btn d-block text-white my-1 {{ request()->routeIs('treatment') ? 'btn-primary' : 'btn-outline-light'}}">Treatment</a>
-                @endif
-                <a href="{{ route('transaksi')}}" class="btn d-block text-white my-1 {{ request()->routeIs('transaksi') ? 'btn-primary' : 'btn-outline-light'}}">Transaksi</a>
-                <a href="{{ route('laporan')}}" class="btn d-block text-white my-1 {{ request()->routeIs('laporan') ? 'btn-primary' : 'btn-outline-light'}}">Laporan</a>
-                <a href="{{ route('gaji')}}" class="btn d-block text-white my-1 {{ request()->routeIs('gaji') ? 'btn-primary' : 'btn-outline-light'}}">Gaji</a>
-                <a class="btn d-block text-white my-1 btn-outline-light" href="{{ route('logout') }}"
-                    onclick="event.preventDefault(); document.getElementById('logout').submit();">
-                    Logout
-                </a> --}}
-                <form id="logout" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </div>
-
-        <!-- Konten Utama -->
+        {{-- Konten Utama --}}
         <div class="content">
-            <main >
+            <main>
                 {{ $slot }}
             </main>
         </div>
     </div>
+
+     <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+    <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{ asset('assets/js/main.js')}}"></script>
 </body>
 
 

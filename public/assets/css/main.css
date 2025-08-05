@@ -3214,7 +3214,7 @@ section,
 
 .leadership .leadership-section .section-header {
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 0;
 }
 
 .leadership .leadership-section .section-header .description {
@@ -4613,7 +4613,7 @@ section,
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
 }
 
 .faculty--staff .faculty-search .input-group .form-control {

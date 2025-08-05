@@ -11,18 +11,13 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#profile"><span>Profile</span></a></li>
-          <!-- <li><a href="#visi">Visi & Misi</a></li> -->
-          <li><a href="#struktur">Struktural</a></li>
-          <li><a href="#berita">Berita</a></li>
-          <li><a href="{{ route('umkm') }}"><span>Umkm</span></i></a>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" class="active"><i class="bi bi-instagram" style="font-size: 25px"></i></a></li>
+          <li><a href="#hero" class="active"><i class="bi bi-whatsapp" style="font-size: 25px"></i></a></li>
+          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
     </div>
   </header>
-
 

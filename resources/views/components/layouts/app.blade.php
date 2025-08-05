@@ -47,26 +47,81 @@
 </head>
 
 <body style="background-color:rgb(255, 255, 255)">
-    <div id="app">
+        <div id="app">
+        @auth
+            @if(Auth::user()->role === 'admin')
+            <div class="sidebar d-none d-md-block">
+                <b class="d-block text-center text-white mb-3" style="font-size: 24px;">
+                    BEAUTY & CO STUDIO
+                </b>
+                <div style="border-bottom: 1px solid #FFFFFF; width: 90%; margin: 0 auto; margin-bottom: 10px"></div>
+                    <div class="menu px-2">
+                        <a href="{{ route('dashboard')}}" class="submenu my-1 {{ request()->routeIs('dashboard') ? 'btn-pink' : 'btn-outline-light'}}">
+                            <i class="bi bi-house-door" style="font-size: 1.4rem"></i>
+                            Beranda
+                        </a>
+                        <a class="dropdown-item submenu my-1" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout').submit();">
+                            <i class="bi bi-box-arrow-right" style="font-size: 1.3rem;"></i> Logout
+                        </a>
+                        <form id="logout" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm d-flex align-items-center fixed-top">
+                <div class="container-fluid">
+                    <button class="btn btn-secondary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                        ☰
+                    </button>
+
+                    <ul class="navbar-nav ms-auto" >
+                        @guest
+                        @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="link nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        @endif
+        
+                        @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ Auth::user()->name }} - {{Auth::user()->role}}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                        @endguest
+                    </ul>
+                </div>
+            </nav>
+            @endif
+        @endauth
+
+
 
        
 
-        <nav class="navbar navbar-light bg-light shadow-sm fixed-top d-block d-md-none">
-            <div class="container-fluid d-flex align-items-center">
-                <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-                    ☰
-                </button>
-            </div>
-        </nav>
-
-   
         <!-- Konten Utama -->
         <div class="content">
-            <main >
+            <main class="py-4">
                 {{ $slot }}
             </main>
         </div>
     </div>
+
      <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

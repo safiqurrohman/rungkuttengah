@@ -24,11 +24,12 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#profile"><span>Profile</span></a></li>
+            <li><a href="#struktur">Struktural</a></li>
+            <li><a href="#berita">Berita</a></li>
+            <li><a href="{{ route('umkm') }}"><span>Umkm</span></i></a>
+            </li>
           </ul>
         </div>
 
