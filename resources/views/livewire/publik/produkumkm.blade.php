@@ -16,7 +16,7 @@
         </div>
         <!-- End Page Title -->
 
-        <section id="campus-facilities" class="campus-facilities section">
+        <section id="campus-facilities" class="campus-facilities section ">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <!-- Hero Introduction Row -->
@@ -38,7 +38,7 @@
                             <div class="highlight-item">
                                 <i class="bi bi-people"></i>
                                 <div>
-                                <span class="number">30</span>
+                                <span class="number">{{ $totalUmkm}}</span>
                                 <span class="label">UMKM</span>
                                 </div>
                             </div>
@@ -58,153 +58,154 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- Campus Highlights Carousel -->
-                <div class="highlights-carousel" data-aos="fade-up" data-aos-delay="200">
-                    <div class="section-header">
-                        <h2>Produk UMKM Rungkut Tengah</h2>
-                        <p>Donec rutrum congue leo eget malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
-                    </div>
-                    <!-- Start Srach Section -->
-                    <div id="faculty--staff" class="faculty--staff section">
-                        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                            <div class="row">
-                                <div class="col-lg-8 mx-auto">
-                                    <div class="faculty-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search faculty by name, department or research area...">
-                                        <button class="search-btn" type="button">
-                                        <i class="bi bi-search"></i>
-                                        </button>
-                                    </div>
-                                    <div class="search-filters mt-3 d-flex flex-wrap">
-                                        <div class="filter-item active">All</div>
-                                        <div class="filter-item">Kuliner</div>
-                                        <div class="filter-item">Kerajinan</div>
-                                        <div class="filter-item">Jasa</div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- /end Search Section -->
-                    <div class="campus-slider swiper init-swiper">
-                        <script type="application/json" class="swiper-config">
-                        {
-                            "loop": true,
-                            "speed": 800,
-                            "autoplay": {
-                            "delay": 4000
-                            },
-                            "slidesPerView": 1,
-                            "spaceBetween": 30,
-                            "navigation": {
-                            "nextEl": ".swiper-button-next",
-                            "prevEl": ".swiper-button-prev"
-                            },
-                            "breakpoints": {
-                            "768": {
-                                "slidesPerView": 2
-                            },
-                            "1024": {
-                                "slidesPerView": 3
-                            }
-                            }
-                        }
-                        </script>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="highlight-card">
-                                    <div class="card-image">
-                                        <img src="assets/img/education/campus-10.webp" alt="Central Library" class="img-fluid" loading="lazy">
-                                        <div class="image-overlay">
-                                        <span class="category-tag">Kuliner</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4>Jajanan Ibu ali</h4>
-                                        <p>Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                                        <div class="card-stats">                                     
-                                            <a href="{{route('katalog')}}" class="cursor-pointer">
-                                                <span>Lihat Detail</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="swiper-slide">
-                                <div class="highlight-card">
-                                    <div class="card-image">
-                                        <img src="assets/img/education/campus-10.webp" alt="Central Library" class="img-fluid" loading="lazy">
-                                        <div class="image-overlay">
-                                        <span class="category-tag">Kuliner</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4>Jajanan Ibu ali 1</h4>
-                                        <p>Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                                        <div class="card-stats">                                     
-                                            <a href="{{route('katalog')}}" class="cursor-pointer">
-                                                <span>Lihat Detail</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="swiper-slide">
-                                <div class="highlight-card">
-                                    <div class="card-image">
-                                        <img src="assets/img/education/campus-10.webp" alt="Central Library" class="img-fluid" loading="lazy">
-                                        <div class="image-overlay">
-                                        <span class="category-tag">Kuliner</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4>Jajanan Ibu ali</h4>
-                                        <p>Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                                        <div class="card-stats">                                     
-                                            <a href="{{route('katalog')}}" class="cursor-pointer">
-                                                <span>Lihat Detail</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="swiper-slide">
-                                <div class="highlight-card">
-                                    <div class="card-image">
-                                        <img src="assets/img/education/campus-10.webp" alt="Central Library" class="img-fluid" loading="lazy">
-                                        <div class="image-overlay">
-                                        <span class="category-tag">Kuliner</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h4>Jajanan Ibu ali</h4>
-                                        <p>Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-                                        <div class="card-stats">                                     
-                                            <a href="{{route('katalog')}}" class="cursor-pointer">
-                                                <span>Lihat Detail</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                        
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-
             </div>
 
         </section>
         <!-- /Campus Facilities Section -->
+        <!-- Faculty  Staff Section -->
+        <section id="faculty--staff" class="faculty--staff section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Search Data Produk  -->
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto ">
+                        <div class="faculty-search">
+                            <div class="input-group">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    placeholder="Search faculty by name, department or research area..." 
+                                    wire:model.debounce.500ms="search"
+                                >
+                                <button class="search-btn" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-filters mt-3 d-flex flex-wrap">
+                                <div class="filter-item {{ $kategori === 'Semua' ? 'active' : '' }}" wire:click="setKategori('Semua')">Semua</div>
+                                <div class="filter-item {{ $kategori === 'Makanan' ? 'active' : '' }}" wire:click="setKategori('Makanan')">Makanan</div>
+                                <div class="filter-item {{ $kategori === 'Minuman' ? 'active' : '' }}" wire:click="setKategori('Minuman')">Minuman</div>
+                                <div class="filter-item {{ $kategori === 'Kerajinan' ? 'active' : '' }}" wire:click="setKategori('Kerajinan')">Kerajinan</div>
+                                <div class="filter-item {{ $kategori === 'Aksesoris' ? 'active' : '' }}" wire:click="setKategori('Aksesoris')">Aksesoris</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk List -->
+                <div class="faculty-grid">
+                    <div class="row g-4">
+                        @forelse($produk as $umkm)
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faculty-card">
+                                    <div class="faculty-image">
+                                        <img src="{{asset('assets/img/'.($umkm->foto ?? 'umkm/default.jpeg'))}}" class="img-fluid" alt="Foto UMKM">
+                                        <div class="social-links">
+                                            @if($umkm->ig)
+                                                <a href="https://instagram.com/{{ ltrim($umkm->ig, '@') }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                            @endif
+
+                                            @if($umkm->wa)
+                                                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $umkm->wa) }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="faculty-info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3>{{$umkm->nama_umkm}}</h3>
+                                            <p class="bg-success px-1 text-white" style="border-radius: 5px;">{{$umkm->status}}</p>
+                                        </div>
+                                        <p class="position">{{'Pemilik: '.$umkm->pemilik}}</p>
+                                        <div class="department">Alamat: {{$umkm->alamat}}</div>
+                                        <div class="department">Kategori: {{$umkm->kategori->nama_kategori}}</div>
+                                        <a href="{{route('katalog', $umkm->id)}}" class="profile-link">Kunjungin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="col-12 text-center my-5">
+                                @if ($search)
+                                    <p class="text-muted">Tidak ada menu yang cocok dengan pencarian.</p>
+                                @elseif ($kategori && $kategori !== 'Semua')
+                                    <p class="text-muted">Tidak ada produk di kategori <strong>{{ $kategori }}</strong>.</p>
+                                @else
+                                    <p class="text-muted">Belum ada produk tersedia.</p>
+                                @endif
+                            </div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <div class="pagination-container mt-5 d-flex justify-content-center" data-aos="fade-up">
+                    <nav aria-label="Faculty pagination">
+                        <ul class="pagination">
+
+                            {{-- Tombol Previous --}}
+                            <li class="page-item {{ $produk->onFirstPage() ? 'disabled' : '' }}">
+                                <a class="page-link" 
+                                wire:click="previousPage" 
+                                wire:loading.attr="disabled" 
+                                aria-label="Previous" 
+                                style="cursor: pointer;">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            {{-- Halaman --}}
+                            @php
+                                $start = max($produk->currentPage() - 1, 1);
+                                $end = min($produk->currentPage() + 1, $produk->lastPage());
+                            @endphp
+
+                            @for ($page = $start; $page <= $end; $page++)
+                                <li class="page-item {{ $page == $produk->currentPage() ? 'active' : '' }}">
+                                    <a class="page-link" 
+                                    wire:click="gotoPage({{ $page }})" 
+                                    style="cursor: pointer;">
+                                        {{ $page }}
+                                    </a>
+                                </li>
+                            @endfor
+
+                            {{-- Tombol Next --}}
+                            <li class="page-item {{ !$produk->hasMorePages() ? 'disabled' : '' }}">
+                                <a class="page-link" 
+                                wire:click="nextPage" 
+                                wire:loading.attr="disabled" 
+                                aria-label="Next" 
+                                style="cursor: pointer;">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- <div class="pagination-container mt-5 d-flex justify-content-center" data-aos="fade-up">
+                    <nav aria-label="Faculty pagination">
+                        <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                            <i class="bi bi-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                            <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div> -->
+            </div>
+
+        </section>
+        <!-- /Faculty  Staff Section -->
 
 
     </main>

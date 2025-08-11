@@ -10,9 +10,8 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="https://wa.me/082228459083" target="_blank" class="active"><i class="bi bi-whatsapp" style="font-size: 25px"></i></a></li>
           <li><a href="#hero" class="active"><i class="bi bi-instagram" style="font-size: 25px"></i></a></li>
-          <li><a href="#hero" class="active"><i class="bi bi-whatsapp" style="font-size: 25px"></i></a></li>
           
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

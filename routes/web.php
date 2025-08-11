@@ -10,13 +10,13 @@ use App\livewire\Admin\Dashboard;
 Auth::routes(['register' => false]);
 
 // Route untuk pengunjung 
-// Route::get('/', Homekelurahan::class)->name('homekelurahan');
+Route::get('/', Homekelurahan::class)->name('homekelurahan');
 Route::get('/umkm', Produkumkm::class)->name('umkm');
-Route::get('/katalog', Katalogproduk::class)->name('katalog');
+Route::get('/katalog/{produk_id}', Katalogproduk::class)->name('katalog');
 
-Route::get('/', function(){
-    return View('welcome');
-});
+// Route::get('/', function(){
+//     return View('welcome');
+// });
 
 // route untuk admin 
 Route::get('/admin', function () {
